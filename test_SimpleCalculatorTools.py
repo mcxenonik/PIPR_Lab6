@@ -1,4 +1,4 @@
-from cheapcalctools import add, subtract, multiply, divide
+from SimpleCalculatorTools import add, subtract, multiply, divide
 import pytest
 
 

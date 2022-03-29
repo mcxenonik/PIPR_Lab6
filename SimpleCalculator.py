@@ -1,7 +1,7 @@
-import cheapcalctools
-
+import SimpleCalculatorTools
 
 def print_operations(operations):
+    print("Operations:")
     for choice, operation in operations.items():
         print(f"{choice}: {operation.__name__}")
 
@@ -24,13 +24,13 @@ def get_operands():
 
 
 def main():
-    print("Welcome to CheapCalc")
+    print("Simple Calculator")
 
     operations = {
-        "1": cheapcalctools.add,
-        "2": cheapcalctools.subtract,
-        "3": cheapcalctools.multiply,
-        "4": cheapcalctools.divide,
+        "1": SimpleCalculatorTools.add,
+        "2": SimpleCalculatorTools.subtract,
+        "3": SimpleCalculatorTools.multiply,
+        "4": SimpleCalculatorTools.divide,
     }
 
     while True:
@@ -39,7 +39,7 @@ def main():
 
         chosen_operation = operations[get_operation(operations)]
 
-        print(chosen_operation(*get_operands()))
+        print("Result:", chosen_operation(*get_operands()))
 
 
 if __name__ == "__main__":
